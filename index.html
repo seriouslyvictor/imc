@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação DOM</title>
+    
+<style>
+    * {
+        box-sizing: border-box;
+        
+    }
+
+    input {
+        outline:  none;
+        font-size: 1.125rem;
+    }
+
+    body {
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        height: 100vh;
+        background-color: #85FFBD;
+        background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 71%);
+
+    }
+
+    .containerimc  {
+        margin: auto;
+        display: flex;
+        flex-flow: column wrap;
+        width: 400px;
+        align-items: center;
+        gap: 20px;
+        
+    }
+
+    .containerbtn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    input {
+        border-radius: 4px;
+        box-shadow: 2px 2px 5px #555;
+    }
+    .btn {
+        border-radius: 15px;
+        padding: 6px 12px;
+    }
+
+    .primario {
+       background-color: #FFFB7D;
+       font-size: 1.1rem;
+       font-weight: bolder;
+
+
+    }
+
+    .secundario {
+       background-color: #FFF;
+       font-size: 1.1rem;
+    }
+
+
+
+</style>
+</head>
+<body>
+    <h1>Manipulando páginas HTML com JS!</h1>
+    <hr>
+    <h2>Calculadora de IMC</h2>
+    
+    <form class="containerimc">
+        <div class="alturacont">
+            <label for="altura">Altura:</label>
+            <input type="number" class="altura" required placeholder="Exemplo: 1.80">
+        </div>
+        <div class="pesocont">
+            <label for="peso">Peso:</label>
+            <input type="text" class="peso" required>
+        </div>
+        <div class="containerbtn">
+            <input class="btn primario" type="button" value="Calcular!">
+            <input class="btn secundario" type="reset" value="Limpar" >
+        </div>
+    </form>
+    <p class="imcresultado">❓ Descubra o seu IMC ❓</p>
+
+</body>
+<script defer src="dom.js"></script>
+</html>
